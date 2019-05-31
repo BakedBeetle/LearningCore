@@ -1,0 +1,41 @@
+﻿@model Employee
+
+
+@{
+    ViewBag.Title = "Create";
+}
+<form asp-controller="home" asp-action="Create" method="post" class="mt-3">
+    <div class="container">
+        <div class="card">
+            <div class="card-header" style="max-height: 45px;border-radius: 5px;background-color:#0f4c8ae3 !important">
+                <label class="text-left text-white">Create Empolyee </label>
+            </div>
+            <div class="card-body col-sm-12">
+                <div class="form-groups row m-1">
+                    <label asp-for="Name" class="col-sm-4 col-form-label"></label>
+                    <input asp-for="Name" class="col-sm-8 form-control" />
+                </div>
+
+                <div class="form-groups row m-1">
+                    <label asp-for="Email" class="col-sm-4 col-form-label"></label>
+                    <input asp-for="Email" class="col-sm-8 form-control" />
+                </div>
+
+                <div class="form-groups row m-1">
+                    <label asp-for="Department" class="col-sm-4 col-form-label"></label>
+                    <Select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()"  class="col-sm-8 form-control" ></Select>
+                </div>
+
+                <div class="form-groups row m-1">
+                    <label asp-for="Contact" class="col-sm-4 col-form-label">
+                    </label>
+                    <input asp-for="Contact" class="col-sm-8 form-control" />
+                </div>
+
+                <div class="form-groups row float-right">
+                    <button type="submit" class="btn btn-success mr-3 mt-1">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

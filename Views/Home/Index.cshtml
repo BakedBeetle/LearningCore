@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Employee>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Employee List";
+}
+
+
+<div class="card-deck" >
+    @foreach (var item in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@item.Name</h3>
+            </div>
+            <img class="card-img-top" src="~/Images/userIcon.jpg" asp-append-version="true"  width="150" height="200"/>
+            <div class="card-footer text-center">
+                <a asp-controller="Home" asp-action="Details" asp-route-id="@item.id" class="btn btn-primary m-1">View</a>
+                <a href="#" class="btn btn-primary m-1">Edit</a>
+                <a href="#" class="btn btn-danger m-1">Delete</a>
+            </div>
+        </div>
+
+    }
+</div>
