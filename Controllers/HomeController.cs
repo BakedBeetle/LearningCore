@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EMPMANA.Models;
+﻿using EMPMANA.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace EMPMANA.Controllers
 {
@@ -19,26 +15,34 @@ namespace EMPMANA.Controllers
 
         public ViewResult Index()
         {
-            var model = _employeerepository.GetAllEmployee();
-            return View("~/Views/Home/Index.cshtml",model);
+            IEnumerable<Employee> model = _employeerepository.GetAllEmployee();
+            return View("~/Views/Home/Index.cshtml", model);
         }
-        
+
         public ViewResult Details(int? id)
         {
-            Employee empmodel = _employeerepository.GetEmployee(id??1);
+            Employee empmodel = _employeerepository.GetEmployee(id ?? 1);
             return View(empmodel);
 
         }
+
         [HttpGet]
         public ViewResult Create()
         {
             return View();
         }
+
         [HttpPost]
-        public RedirectToActionResult Create(Employee emp)
+        public IActionResult Create(Employee emp)
         {
-            _employeerepository.AddEmployee(emp);
-            return RedirectToAction("details", new {id=emp.id });
+            if (ModelState.IsValid)
+            {
+                _employeerepository.AddEmployee(emp);
+                return RedirectToAction("details", new { id = emp.id });
+            }
+
+            return View();
+
         }
     }
 }

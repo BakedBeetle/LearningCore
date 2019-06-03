@@ -9,5 +9,9 @@ namespace EMPMANA.Models
         IEnumerable<Employee> GetAllEmployee();
 
         Employee AddEmployee(Employee employee);
+
+        Employee UpdateEmployee(Employee EmployeeChanges);
+
+        Employee DeleteEmployee(int id);
     }
 }

@@ -20,10 +20,13 @@ namespace EMPMANA.Models
 
         public Employee AddEmployee(Employee employee)
         {
+           
             employee.id = _elist.Max(x => x.id) + 1;
             _elist.Add(employee);
             return employee;
         }
+
+       
 
         public IEnumerable<Employee> GetAllEmployee()
         {
@@ -33,6 +36,29 @@ namespace EMPMANA.Models
         public Employee GetEmployee(int Id)
         {
             return _elist.FirstOrDefault(e => e.id == Id);   
+        }
+
+        public Employee UpdateEmployee(Employee EmployeeChanges)
+        {
+            Employee emp = _elist.FirstOrDefault(e => e.id == EmployeeChanges.id);
+            if (emp != null)
+            {
+                emp.Name = EmployeeChanges.Name;
+                emp.Email = EmployeeChanges.Email;
+                emp.Contact = EmployeeChanges.Contact;
+                emp.Department = EmployeeChanges.Department;
+            }
+            return emp;
+        }
+
+        public Employee DeleteEmployee(int id)
+        {
+            Employee emp = _elist.FirstOrDefault(e => e.id == id);
+            if(emp != null)
+            {
+                _elist.Remove(emp);
+            }
+            return emp;
         }
     }
 }
