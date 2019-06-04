@@ -1,6 +1,12 @@
 ﻿.imgwdth{
-    width:80%;
+    height:200px;
+    width:auto;
+
 }
 .btn{
     width:75px;
+}
+.fixcardhdr {
+    max-height: 70px;
+    min-height: 70px;
 }

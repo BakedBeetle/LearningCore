@@ -34,7 +34,8 @@ namespace EMPMANA
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                // app.UseDeveloperExceptionPage();
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
             
             app.UseStaticFiles();
@@ -42,10 +43,7 @@ namespace EMPMANA
             app.UseMvc(routes =>routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}"));
             
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World 2");
-            });
+           
         }
     }
 }

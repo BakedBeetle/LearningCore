@@ -26,3 +26,6 @@ C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.dll
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.pdb
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.csproj.CopyComplete
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.csprojAssemblyReference.cache
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\CustomNotFoundError.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Shared\NotFound.g.cshtml.cs
