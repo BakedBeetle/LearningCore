@@ -1,0 +1,27 @@
+﻿@model EMPMANA.ViewModels.RegisterViewModel;
+
+@{
+    ViewBag.Title = "Register";
+}
+<div class="row">
+    <div class="col-sm-12">
+        <form method="post">
+            <div class="form-groups ">
+                <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                <input asp-for="Email" class="col-sm-10 form-control" />
+            </div>
+            <div class="form-groups ">
+                <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                <input asp-for="Password" class="col-sm-10 form-control" />
+            </div>
+            <div class="form-groups ">
+                <label asp-for="ConfirmPassword" class="col-sm-2 col-form-label"></label>
+                <input asp-for="ConfirmPassword" class="col-sm-10 form-control" />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+        <div asp-validation-summary="All" class="text-danger">
+        </div>
+    </div>
+</div>

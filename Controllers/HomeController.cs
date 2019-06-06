@@ -28,7 +28,7 @@ namespace EMPMANA.Controllers
 
         public ViewResult Details(int id)
         {
-
+            throw new Exception("check log");
 
             Employee empmodel = _employeerepository.GetEmployee(id);
             if(empmodel == null)

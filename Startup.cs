@@ -6,6 +6,7 @@ using EMPMANA.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,7 +26,8 @@ namespace EMPMANA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
-            services.AddMvc();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddMvc().AddXmlSerializerFormatters();
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
         }
 
@@ -35,11 +37,12 @@ namespace EMPMANA
             if (env.IsDevelopment())
             {
                 // app.UseDeveloperExceptionPage();
+                app.UseExceptionHandler("/Error");
                 app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
             
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}"));
             
 

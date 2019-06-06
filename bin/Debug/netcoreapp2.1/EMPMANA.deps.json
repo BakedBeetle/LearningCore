@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "3d650778e3500094e38cb51398f5ded5c197beae"
+    "signature": "31c66acf8679d1dd78cb804b4ec418c05364a76f"
   },
   "compilationOptions": {
     "defines": [
@@ -27,7 +27,8 @@
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
+          "NLog.Web.AspNetCore": "4.8.3"
         },
         "runtime": {
           "EMPMANA.dll": {}
@@ -361,6 +362,49 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "NLog/4.6.4": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.4.10085"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.5.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "NLog": "4.6.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.5.1.998"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web.AspNetCore/4.8.3": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.Http": "2.1.1",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.1.1",
+          "NLog.Extensions.Logging": "1.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.8.3.1314"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -3587,6 +3631,27 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "NLog/4.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aC4Hrp2g5fzrIl3aWGa/nBWZxlk/QUQLA8vfOLR6FdwgVhyQ8EOgSrq5ssKjEFb3qogx9m66v0pZPT1AaqBarQ==",
+      "path": "nlog/4.6.4",
+      "hashPath": "nlog.4.6.4.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/1.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RvP4qVxamyKD5R1pkN0Yk3/pMG603SFDBu7UFGLhPDKKGWs9oMxmy72uGHs9QaDbUvES2+YD7/4XjqMsnaiSpg==",
+      "path": "nlog.extensions.logging/1.5.1",
+      "hashPath": "nlog.extensions.logging.1.5.1.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/4.8.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TpJbhzNyHrGLEYyxp+ZO8CVDC1sPBLdoqGPdz1Ti4DY3T5wTB61ipNzAWPeiCq5+BXqrX+LwG0xzziJCKDZYEQ==",
+      "path": "nlog.web.aspnetcore/4.8.3",
+      "hashPath": "nlog.web.aspnetcore.4.8.3.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",

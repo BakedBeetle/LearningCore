@@ -29,3 +29,5 @@ C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.cspro
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\CustomNotFoundError.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Shared\NotFound.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\bin\Debug\netcoreapp2.1\nlog.config
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
