@@ -1,10 +1,15 @@
 ﻿using EMPMANA.Models;
+using EMPMANA.Services;
 using EMPMANA.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace EMPMANA.Controllers
 {
@@ -12,12 +17,20 @@ namespace EMPMANA.Controllers
     {
         private readonly IEmployeeRepository _employeerepository;
         private readonly IHostingEnvironment _hostingEnvironment;
+        static CloudBlobClient blobClient;
+        const string blobContainerName = "webappstoragedotnet-imagecontainer";
+        static CloudBlobContainer blobContainer;
+
+        public IConfiguration Configuration { get; }
+        public IAzureBlobService AzureBlobService { get; }
 
         public HomeController(IEmployeeRepository emp,
-            IHostingEnvironment hostingEnvironment)
+            IHostingEnvironment hostingEnvironment, IConfiguration configuration,IAzureBlobService azureBlobService)
         {
             _employeerepository = emp;
             this._hostingEnvironment = hostingEnvironment;
+            Configuration = configuration;
+            AzureBlobService = azureBlobService;
         }
 
         public ViewResult Index()
@@ -28,10 +41,10 @@ namespace EMPMANA.Controllers
 
         public ViewResult Details(int id)
         {
-            throw new Exception("check log");
+
 
             Employee empmodel = _employeerepository.GetEmployee(id);
-            if(empmodel == null)
+            if (empmodel == null)
             {
                 Response.StatusCode = 404;
                 return View("CustomNotFoundError", id);
@@ -127,5 +140,6 @@ namespace EMPMANA.Controllers
 
             return filename;
         }
+
     }
 }

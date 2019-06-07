@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EMPMANA.Models;
+using EMPMANA.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -26,8 +27,15 @@ namespace EMPMANA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 10;
+                options.Password.RequiredUniqueChars = 3;
+            }).AddEntityFrameworkStores<AppDbContext>();
             services.AddMvc().AddXmlSerializerFormatters();
+
+            services.AddSingleton<IAzureBlobConnectionFactory, AzureBlobConnectionFactory>();
+            services.AddSingleton<IAzureBlobService, AzureBlobService>();
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
         }
 
