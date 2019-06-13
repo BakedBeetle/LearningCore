@@ -1,3 +1,4 @@
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\bin\Debug\netcoreapp2.1\nlog.config
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\bin\Debug\netcoreapp2.1\EMPMANA.deps.json
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\bin\Debug\netcoreapp2.1\EMPMANA.runtimeconfig.json
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\bin\Debug\netcoreapp2.1\EMPMANA.runtimeconfig.dev.json
@@ -13,9 +14,15 @@ C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.Assem
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.TagHelpers.input.cache
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.TagHelpers.output.cache
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.RazorCoreGenerate.cache
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Graph\Index.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\CustomNotFoundError.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Shared\NotFound.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\_ViewImports.g.cshtml.cs
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\_ViewStart.g.cshtml.cs
@@ -26,8 +33,3 @@ C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.dll
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.pdb
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.csproj.CopyComplete
 C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\EMPMANA.csprojAssemblyReference.cache
-C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
-C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Home\CustomNotFoundError.g.cshtml.cs
-C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Shared\NotFound.g.cshtml.cs
-C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\bin\Debug\netcoreapp2.1\nlog.config
-C:\Users\vasu\Source\Repos\EMPMANA\EMPMANA\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs

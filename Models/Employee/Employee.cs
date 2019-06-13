@@ -25,7 +25,6 @@ namespace EMPMANA.Models
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "Invalid Contact Number")]
         public string Contact { get; set; }
 
-
         public string photopath { get; set; }
     }
 }

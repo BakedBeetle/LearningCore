@@ -51,7 +51,7 @@ namespace EMPMANA
             
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UseMvc(routes =>routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}"));
+            app.UseMvc(routes =>routes.MapRoute("default","{controller=Graph}/{action=Index}/{id?}"));
             
 
            
