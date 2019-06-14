@@ -4,7 +4,7 @@
 ///   Class:          <GraphController>
 ///   Description:    <Getting Email from O365 using Graph-API>
 ///   Author:         <Vasu Panchal>                    Date: <11-06-2019>
-///   Notes:          <Static Token is used and No Authentication Mehtod to office365 account is Implemented >
+///   Notes:          <Static Token is used and No Authentication Method to office365 account is Implemented >
 ///-----------------------------------------------------------------
 ///
 #endregion
@@ -26,6 +26,7 @@ namespace EMPMANA.Controllers
     {
         public async Task<IActionResult> Index()
         {
+        
             string token = "eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFEQ29NcGpKWHJ4VHE5Vkc5dGUtN0ZYU3dTSEFKZzN0S3g0WGYzZjg1TDNhc2pnQ0o4c3ZxVXBQVi1PNWI0SVNVRHhpcmcycHhmMUJ2YjBCbzQ1QjE1S3czYTBUM0V1bnBhZXJma3hOY0xTX0NBQSIsImFsZyI6IlJTMjU2IiwieDV0IjoiQ3RmUUM4TGUtOE5zQzdvQzJ6UWtacGNyZk9jIiwia2lkIjoiQ3RmUUM4TGUtOE5zQzdvQzJ6UWtacGNyZk9jIn0.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC85ZjFhMGZlMi1iMTY4LTQyMjgtYjM0Yi04NWRjNjQ2ZmE3NTMvIiwiaWF0IjoxNTYwMzQyMDkwLCJuYmYiOjE1NjAzNDIwOTAsImV4cCI6MTU2MDM0NTk5MCwiYWNjdCI6MCwiYWNyIjoiMSIsImFpbyI6IkFTUUEyLzhMQUFBQTBpUGt1NTdYUGo3UjNuUFZiZFh4a0ZOcUJQdkd4K1lGWU83WC9iakU5RFk9IiwiYW1yIjpbInB3ZCJdLCJhcHBfZGlzcGxheW5hbWUiOiJFbWFpbExvZ2dpbmctQWRkLUluIiwiYXBwaWQiOiJhNjQ0MmE1NC1jZTVhLTQwOWEtOWI4NS03Y2EyMmU2NDhjYmMiLCJhcHBpZGFjciI6IjAiLCJmYW1pbHlfbmFtZSI6IlBhbmNoYWwiLCJnaXZlbl9uYW1lIjoiVmFzdSIsImlwYWRkciI6IjE4MC4yMTEuMTAzLjE4NSIsIm5hbWUiOiJWYXN1IFBhbmNoYWwiLCJvaWQiOiJiN2NlMzhmNy1hNGRlLTRhNzgtYTdhNS0wNWJhZmQ2ZDcyMjUiLCJwbGF0ZiI6IjMiLCJwdWlkIjoiMTAwMzIwMDA0MkE2NTE3OSIsInNjcCI6IkZpbGVzLlJlYWRXcml0ZS5BbGwgTWFpbC5SZWFkIG9wZW5pZCBwcm9maWxlIFNpdGVzLlJlYWQuQWxsIFVzZXIuUmVhZCBlbWFpbCIsInNpZ25pbl9zdGF0ZSI6WyJpbmtub3dubnR3ayJdLCJzdWIiOiJ2Z0pKaU1oZFdOMjJyQjA4QXBON0pkVXlxRk5wT3NUdGRjQWtDUmpfM2E0IiwidGlkIjoiOWYxYTBmZTItYjE2OC00MjI4LWIzNGItODVkYzY0NmZhNzUzIiwidW5pcXVlX25hbWUiOiJ2YXN1QHByYWthc2hpbmZvdGVjaC5jb20iLCJ1cG4iOiJ2YXN1QHByYWthc2hpbmZvdGVjaC5jb20iLCJ1dGkiOiJUc0dXdlhtd18wS0hRNjl0YmIwbUFBIiwidmVyIjoiMS4wIiwieG1zX3N0Ijp7InN1YiI6Ilh6aHNzVHBZbmNObUZjbkxoQ1hrZHMwSERoeUNFXzJNV0NObVl0aktfTVkifSwieG1zX3RjZHQiOjEzMzgzNjAyNTR9.NdaOhi4jVmg0IwmmczbmkOQriEdm3BxPShvc9WsLCAcNDg1TCgc2RuycBboHLlRS36zft9f3LBpyfYjEdmb-Gwb6Ndce-hsDqyN6h4WuRNZEIN3QZ37I2qsiTvPp8-mRBhlDWyKgUNvaJ98zFTPo1WhtivcevBhl6yPVh9c2RNcs91UTq-3K7t8Ea54_6XmKj65zRJ0PLGUrbt_4u1cDtzl8uD9eD5KAyZr6adINoZkr_kj--95VZR_XlPqGFKy24dNm0LSUYR2MmflsJ5f2cORKZh3FAi7E4s9br-oWWTscQjnYH_fc4luAF8zpV8u7SlPAvDYRv4fsm7F6drks8A";
 
             if (string.IsNullOrEmpty(token))
@@ -108,7 +109,6 @@ namespace EMPMANA.Controllers
             }
             return EviewModel;
         }
-
 
         /// <summary>
         /// Parallel Task to create new MailMessages and saves 

@@ -120,7 +120,7 @@ namespace EMPMANA.Controllers
 
 
                 _employeerepository.UpdateEmployee(model);
-                return RedirectToAction("Index");
+                return View("~/Views/Account/Login.cshtml");
             }
 
             return View();
